@@ -1,9 +1,10 @@
 # PyConstants
-A library to make constants in python
+Adds constants in python
 
-# Goals
-- Make it working
-- Detect type hinted constants (typing.Final)
-- Detect constants by the name (CONSTANT_VAR)
-- Add a way to make any varible constant (const .foo = "bar")
+# Usage
+```
+from pyconstants import const
 
+const .a = 5
+a = 7  # Raises SyntaxError
+```
