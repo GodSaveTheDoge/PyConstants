@@ -10,7 +10,7 @@ class ConstantValue:
     name: str
     value: object
 
-def _traceFun(frame: FrameType, event: str, arg: object) -> None: # FIXME
+def _traceFun(frame: FrameType, event: str, arg: object) -> None:
     for constant in constMap[frame]:
         if constant.name in frame.f_locals and frame.f_locals[constant.name] != constant.value:
             frame.f_locals[constant.name] = constant.value 
